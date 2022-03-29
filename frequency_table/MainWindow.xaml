@@ -1,0 +1,28 @@
+﻿<Window x:Name="MainForm" x:Class="frequency_table.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:frequency_table"
+        mc:Ignorable="d"
+        Title="Statistical Caculator" Height="480" Width="980" ResizeMode="NoResize" SizeToContent="WidthAndHeight">
+    <Grid HorizontalAlignment="Left" Height="445" Margin="0,10,0,0" VerticalAlignment="Top" Width="970">
+        <Button x:Name="Caculate_btn" Content="Caculate!" HorizontalAlignment="Left" Height="24" Margin="10,411,0,0" VerticalAlignment="Top" Width="111" Click="Button_Click"/>
+        <Label x:Name="InpuCheck_label" Content="No Input" HorizontalAlignment="Left" Margin="10,384,0,0" VerticalAlignment="Top" Width="111"/>
+        <TextBox x:Name="Input_tb" HorizontalAlignment="Left" Height="369" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="115" RenderTransformOrigin="0.5,0.5" TextChanged="TextBox_TextChanged" AcceptsReturn="True" Text="Enter data here"/>
+        <DataGrid x:Name="DataGrid" HorizontalAlignment="Left" Height="367" Margin="135,10,0,0" VerticalAlignment="Top" Width="825" d:ItemsSource="{d:SampleData ItemCount=5}" MinColumnWidth="10"/>
+        <TextBox x:Name="Median_tb" HorizontalAlignment="Left" Height="20" Margin="905,384,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="55" IsReadOnly="True"/>
+        <TextBox x:Name="Average_tb" HorizontalAlignment="Left" Height="20" Margin="793,384,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="55" IsReadOnly="True"/>
+        <TextBox x:Name="Variance_tb" HorizontalAlignment="Left" Height="20" Margin="680,384,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="55" IsReadOnly="True"/>
+        <TextBox x:Name="Skewness_tb" HorizontalAlignment="Left" Height="20" Margin="568,384,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="55" IsReadOnly="True"/>
+        <TextBox x:Name="Kurtosis_tb" HorizontalAlignment="Left" Height="20" Margin="445,384,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="55" IsReadOnly="True"/>
+        <TextBox x:Name="SD_tb" HorizontalAlignment="Left" Height="20" Margin="329,384,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="55" IsReadOnly="True"/>
+        <Label Content="Median:" HorizontalAlignment="Left" Margin="853,380,0,0" VerticalAlignment="Top"/>
+        <Label Content="Average:" HorizontalAlignment="Left" Margin="740,380,0,0" VerticalAlignment="Top"/>
+        <Label Content="variance:" HorizontalAlignment="Left" Margin="623,380,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="Skeness_l" Content="Skewness:" HorizontalAlignment="Left" Margin="500,380,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="Kurtosis_l" Content="Kurtosis:" HorizontalAlignment="Left" Margin="389,380,0,0" VerticalAlignment="Top"/>
+        <Label Content="Standard deviation:" HorizontalAlignment="Left" Margin="213,380,0,0" VerticalAlignment="Top" Width="114"/>
+
+    </Grid>
+</Window>
